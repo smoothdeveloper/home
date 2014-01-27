@@ -1,3 +1,6 @@
+;; I like having line numbers
+(global-linum-mode t)
+
 (require 'package)
 ;; add the original Emacs Lisp Package Archive
 (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
@@ -29,13 +32,15 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 
+;; folder containing additional plugins
+(add-to-list 'load-path "~/.emacs.d/plugins")
 
+;; rainbow delimiters
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
-
-
-
-
-
+;; highlight matching parens/braces/...
+(show-paren-mode 1)
 
 
 ;; auto generated custom-set stuff
@@ -63,4 +68,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Envy Code R" :foundry "outline" :slant normal :weight normal :height 90 :width normal)))))
+ '(default ((t (:family "Envy Code R" :foundry "outline" :slant normal :weight normal :height 90 :width normal))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#C071E1"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#8371E1"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#719BE1"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#71DDE1"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#71E19B"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#8EE171"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#D8E171"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#E1A071"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#E17471"))))
+ '(rainbow-delimiters-unmatched-face ((t (:foreground "orange red")))))
+
+;;

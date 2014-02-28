@@ -13,9 +13,15 @@
 (add-to-list 'load-path my-theme-dir)
 (setq custom-theme-directory my-theme-dir)
 
+;; hook haskell mode
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
+
+;; hook fsharp mode
+(autoload 'fsharp-mode "fsharp-mode" "Major mode for editing F# code." t)
+(add-to-list 'auto-mode-alist '("\\.fs[iylx]?$" . fsharp-mode))
+
 
 ;; enable auto-complete every where (need to be updated with matching package directories)
 (add-to-list 'load-path "~/.emacs.d/elpa/popup-0.5")
@@ -31,7 +37,6 @@
 ;; enable Flycheck mode in all buffers, in which it can be used
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-
 ;; folder containing additional plugins
 (add-to-list 'load-path "~/.emacs.d/plugins")
 
@@ -41,7 +46,6 @@
 
 ;; highlight matching parens/braces/...
 (show-paren-mode 1)
-
 
 ;; auto generated custom-set stuff
 

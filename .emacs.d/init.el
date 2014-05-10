@@ -40,6 +40,10 @@
 ;; folder containing additional plugins
 (add-to-list 'load-path "~/.emacs.d/plugins")
 
+;; speedbar
+(require 'speedbar)
+(speedbar-add-supported-extension ".hs")
+
 ;; rainbow delimiters
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)

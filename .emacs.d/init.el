@@ -8,6 +8,13 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+(package-initialize)
+
+;; some auto-complete defaults
+(require 'auto-complete-config)
+(ac-config-default)
+(setq ac-show-menu-immediately-on-auto-complete t)
+
 ;; define custom themes directory
 (setq my-theme-dir "~/.emacs.d/themes")
 (add-to-list 'load-path my-theme-dir)
@@ -22,6 +29,10 @@
 (autoload 'fsharp-mode "fsharp-mode" "Major mode for editing F# code." t)
 (add-to-list 'auto-mode-alist '("\\.fs[iylx]?$" . fsharp-mode))
 
+;; python stuff
+(require 'jedi)
+(add-to-list 'ac-sources 'ac-source-jedi-direct)
+(add-hook 'python-mode-hook 'jedi:setup)
 
 ;; enable auto-complete every where (need to be updated with matching package directories)
 (add-to-list 'load-path "~/.emacs.d/elpa/popup-0.5")

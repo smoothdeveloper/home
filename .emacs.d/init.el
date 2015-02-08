@@ -1,66 +1,21 @@
-;; I like having line numbers
-(global-linum-mode t)
 
-(require 'package)
-;; add the original Emacs Lisp Package Archive
-(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
-;; add the user-contributed repository
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+; https://github.com/Heather/clarity/blob/master/init.el
 
-(package-initialize)
+;; Load all the stuff
+(setq init-path (expand-file-name "~/.emacs.d/site-lisp"))
+(load-file (expand-file-name "init.el" init-path))
 
-;; some auto-complete defaults
-(require 'auto-complete-config)
-(ac-config-default)
-(setq ac-show-menu-immediately-on-auto-complete t)
+;; Client - Server hack for windows
+(when (eq system-type 'windows-nt)
+    (load "server")
+    (unless (server-running-p) (server-start))
 
-;; define custom themes directory
-(setq my-theme-dir "~/.emacs.d/themes")
-(add-to-list 'load-path my-theme-dir)
-(setq custom-theme-directory my-theme-dir)
-
-;; hook haskell mode
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-(autoload 'ghc-init "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
-
-;; hook fsharp mode
-(autoload 'fsharp-mode "fsharp-mode" "Major mode for editing F# code." t)
-(add-to-list 'auto-mode-alist '("\\.fs[iylx]?$" . fsharp-mode))
-
-;; python stuff
-(require 'jedi)
-(add-to-list 'ac-sources 'ac-source-jedi-direct)
-(add-hook 'python-mode-hook 'jedi:setup)
-
-;; enable auto-complete every where (need to be updated with matching package directories)
-(add-to-list 'load-path "~/.emacs.d/elpa/popup-0.5")
-(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-20130724.1750")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20130724.1750/dict")
-(ac-config-default)
-
-;; display line and column numbers
-(setq column-number-mode t)
-(setq global-linum-mode t)
-
-;; enable Flycheck mode in all buffers, in which it can be used
-(add-hook 'after-init-hook #'global-flycheck-mode)
-
-;; folder containing additional plugins
-(add-to-list 'load-path "~/.emacs.d/plugins")
-
-;; speedbar
-(require 'speedbar)
-(speedbar-add-supported-extension ".hs")
-
-;; rainbow delimiters
-(require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
-;; highlight matching parens/braces/...
-(show-paren-mode 1)
+    ;; Hiding the form instead of closing it.
+    (defun hide-form ()
+        (interactive)
+        (server-edit)
+        (make-frame-invisible nil t))
+    (global-set-key (kbd "C-x C-c") 'hide-form))
 
 ;; auto generated custom-set stuff
 

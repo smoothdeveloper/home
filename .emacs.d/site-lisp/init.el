@@ -1,14 +1,6 @@
 
-(require 'package)
-;; add the original Emacs Lisp Package Archive
-(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
-;; add the user-contributed repository
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-
-(package-initialize)
-
 ; Base init
+(load "~/.emacs.d/site-lisp/packages.el")
 
 (defvar init-path (expand-file-name "~/.emacs.d/site-lisp"))
 (add-to-list 'load-path "~/.emacs.d/site-lisp/modules")
@@ -45,10 +37,10 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/packages/")
 
 ;; Load Settings
-(dolist (file (directory-files init-settings-path t "-settings\\.el$"))
-    (condition-case e
-        (load-file file)
-        (error (warn "Error while loading settings file %s: %S" file (cdr e)))))
+(dolist
+    (file (directory-files init-settings-path t "-settings\\.el$"))
+    (condition-case e (load-file file) (error (warn "Error while loading settings file %s: %S" file (cdr e)))))
+
 (provide 'init)
 
 ;; UTF8

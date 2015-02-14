@@ -1,0 +1,5 @@
+happy
+ghc-mod
+ghc-imported-from
+hlint
+scion

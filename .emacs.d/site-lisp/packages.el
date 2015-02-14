@@ -36,6 +36,11 @@
   scss-mode         ; SCSS
   magit
 
+  rainbow-delimiters ; nifty colored pairs
+  flycheck
+  fsharp-mode
+  rainbow-delimiters
+  jedi
    ; color themes:
   zenburn-theme     ; most eye-pleasant coding theme available
 

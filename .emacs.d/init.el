@@ -17,6 +17,20 @@
         (make-frame-invisible nil t))
     (global-set-key (kbd "C-x C-c") 'hide-form))
 
+(if (eq system-type 'windows-nt)
+    ;; do windows stuff
+    
+    (custom-set-faces
+     '(default ((t (:family "Envy Code R" :foundry "outline" :slant normal :weight normal :height 90 :width normal))))
+     )
+  )
+
+(if (eq system-type 'darwin)
+    ;; do macos stuff
+    ()
+    )
+
+
 ;; auto generated custom-set stuff
 
 (custom-set-variables
@@ -37,21 +51,3 @@
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t))
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Envy Code R" :foundry "outline" :slant normal :weight normal :height 90 :width normal))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#C071E1"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#8371E1"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#719BE1"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "#71DDE1"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#71E19B"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#8EE171"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "#D8E171"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "#E1A071"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#E17471"))))
- '(rainbow-delimiters-unmatched-face ((t (:foreground "orange red")))))
-
-;;

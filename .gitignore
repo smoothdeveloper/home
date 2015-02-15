@@ -2,7 +2,7 @@
 .emacs.d/recentf
 .emacs.d/ac-comphist.dat
 .emacs.d/server
-.emacs.d/site-listp/modules
+.emacs.d/site-lisp/modules
 *#
 *~
 .#*

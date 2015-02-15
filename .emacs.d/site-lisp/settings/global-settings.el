@@ -24,11 +24,12 @@
 ;; recent files
 (require 'recentf)
 (setq recentf-max-saved-items 200
-      recentf-max-menu-items 15)
+      recentf-max-menu-items 35)
 (recentf-mode +1)
 
 ;; define custom themes directory
-(setq my-theme-dir "~/.emacs.d/themes")
+(defvar my-theme-dir)
+(my-theme-dir "~/.emacs.d/themes")
 (add-to-list 'load-path my-theme-dir)
 (setq custom-theme-directory my-theme-dir)
 
@@ -40,9 +41,28 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; highlight matching parens/braces/...
-(setq show-paren-mode 1)
+(show-paren-mode t)
+(show-paren-delay 0) ; no delay
 
 ;; speedbar
 (require 'speedbar)
 (speedbar-add-supported-extension ".hs")
 (speedbar-add-supported-extension ".el")
+
+;; Assume new files as modified:
+(add-hook
+ 'find-file-hooks
+ (lambda ()
+   (when (not (file-exists-p (buffer-file-name)))
+     (set-buffer-modified-p t))))
+
+;; Add a sane tab completion:
+(require 'smart-tab)                     ; requires the smart-tab package.
+(global-smart-tab-mode 1)
+
+;; Add a neat sidebar for easier directory/project browsing:
+(require 'sr-speedbar)                             ; requires the sr-speedbar package.
+(global-set-key (kbd "M-s") 'sr-speedbar-toggle)   ; this shortcut was still free.
+(sr-speedbar-open)                                 ; open it right away
+
+;;; 

@@ -1,7 +1,8 @@
 .emacs.d/elpa
 .emacs.d/recentf
 .emacs.d/ac-comphist.dat
-
+.emacs.d/server
+.emacs.d/site-listp/modules
 *#
 *~
 .#*

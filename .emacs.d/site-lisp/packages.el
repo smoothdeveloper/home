@@ -19,21 +19,20 @@
 
 (defvar required-packages
   '(
-					; emacs package management
-					; package-filter
-    
-    
 					; web stuff
-					gh ; github
-					twittering-mode
-					erc-tweet         ; ERC add-in: show tweets
-					erc-youtube       ; ERC add-in: show YT video details
-					erc-image         ; ERC add-in: inline images
-					erc-hl-nicks      ; ERC add-in: highlight nicknames
+    gh ; github
+    twittering-mode
+    erc-tweet         ; ERC add-in: show tweets
+    erc-youtube       ; ERC add-in: show YT video details
+    erc-image         ; ERC add-in: inline images
+    erc-hl-nicks      ; ERC add-in: highlight nicknames
     
     nlinum ; better line number mode
+    powerline ; infobar looks nicer
 
 
+    
+    auto-highlight-symbol ; highlights symbol at point all the time
 					; fly-check + enhancements
     flycheck
 					;flycheck-pos-tip
@@ -76,14 +75,14 @@
 
 
 					; Haskell stuff
-					haskell-mode
-					flycheck-ghcmod
-					flycheck-haskell
-					flycheck-hdevtools
+    haskell-mode
+    flycheck-ghcmod
+    flycheck-haskell
+    flycheck-hdevtools
 					;ac-haskell-process ;      Haskell auto-complete source which uses the current haskell process
-					ghc
-					ghc-imported-from
-					ghci-completion
+    ghc
+    ghc-imported-from
+    ghci-completion
 					;haskell-emacs
 					;hi2
     hindent

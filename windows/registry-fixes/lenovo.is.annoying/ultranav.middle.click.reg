@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; middle button should behave like on a mouse, but you can't edit this setting anymore
+; with latest lenovo ultranav drivers
+; http://johnbruer.com/2013/05/18/middle-click-thinkpad-synaptics-touchpad/
+
+[HKEY_CURRENT_USER\Software\Synaptics\SynTPEnh\UltraNavPS2]
+"TrackPointMode"=dword:00002214
+"TrackPointModeFunction"=dword:00000010
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Synaptics\SynTPEnh]
+"UseScrollCursor"=dword:00000000

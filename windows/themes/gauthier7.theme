@@ -1,0 +1,117 @@
+; Copyright © Microsoft Corp. 1995-2001
+
+
+; My Computer
+[CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-109
+
+; My Documents
+[CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}\DefaultIcon]
+DefaultValue=%WinDir%SYSTEM32\mydocs.dll,0
+
+; My Network Places - SHIDI_MYNETWORK
+[CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\DefaultIcon]
+DefaultValue=%WinDir%SYSTEM32\imageres.dll,-25
+
+; Recycle Bin
+[CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+full=%SystemRoot%\System32\imageres.dll,-54
+empty=%SystemRoot%\System32\imageres.dll,-55
+
+
+
+[Control Panel\Colors]
+ActiveTitle=136 0 0
+Background=0 0 0
+Hilight=255 223 0
+HilightText=0 0 0
+TitleText=255 255 255
+Window=247 245 200
+WindowText=48 48 48
+Scrollbar=236 235 215
+InactiveTitle=64 63 43
+Menu=216 213 175
+WindowFrame=0 0 0
+MenuText=0 0 0
+ActiveBorder=255 128 0
+InactiveBorder=66 64 43
+AppWorkspace=98 94 77
+ButtonFace=216 213 175
+ButtonShadow=173 167 86
+GrayText=68 66 45
+ButtonText=0 0 0
+InactiveTitleText=236 235 215
+ButtonHilight=236 235 215
+ButtonDkShadow=64 64 64
+ButtonLight=216 213 175
+InfoText=0 0 0
+InfoWindow=255 255 225
+GradientActiveTitle=255 242 0
+GradientInactiveTitle=236 235 215
+ButtonAlternateFace=181 181 181
+HotTrackingColor=0 0 128
+MenuHilight=10 36 106
+MenuBar=212 208 200
+
+
+[Control Panel\Cursors]
+Arrow=%SystemRoot%\cursors\aero_arrow.cur
+Help=%SystemRoot%\cursors\aero_helpsel.cur
+AppStarting=%SystemRoot%\cursors\aero_working.ani
+Wait=%SystemRoot%\cursors\aero_busy.ani
+NWPen=%SystemRoot%\cursors\aero_pen.cur
+No=%SystemRoot%\cursors\aero_unavail.cur
+SizeNS=%SystemRoot%\cursors\aero_ns.cur
+SizeWE=%SystemRoot%\cursors\aero_ew.cur
+SizeNWSE=%SystemRoot%\cursors\aero_nwse.cur
+SizeNESW=%SystemRoot%\cursors\aero_nesw.cur
+SizeAll=%SystemRoot%\cursors\aero_move.cur
+UpArrow=%SystemRoot%\cursors\aero_up.cur
+DefaultValue=Windows Aero
+Hand=%SystemRoot%\cursors\aero_link.cur
+
+[Control Panel\Desktop]
+TileWallpaper=0
+WallpaperStyle=2
+Pattern=
+ScreenSaveActive=0
+
+[Control Panel\Desktop\WindowMetrics]
+
+[Metrics]
+IconMetrics=76 0 0 0 75 0 0 0 75 0 0 0 1 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   
+NonclientMetrics=88 1 0 0 1 0 0 0 16 0 0 0 16 0 0 0 15 0 0 0 15 0 0 0 247 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 188 2 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0 15 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 188 2 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0 0 15 0 0 0 247 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 245 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 247 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   
+PaddedBorderWidth=0
+LangID=1033
+
+[boot]
+SCRNSAVE.EXE=
+
+
+[MasterThemeSelector]
+MTSM=DABJDKT
+ThemeColorBPP=4
+
+
+[VisualStyles]
+Path=
+ColorStyle=Windows Classic
+Size=Normal
+ColorizationColor=0X45409EFE
+Transparency=1
+Composition=0
+VisualStyleVersion=10
+[Sounds]
+SchemeName=Custom
+[AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm]
+DefaultValue=TPBTVLWV.wav
+[AppEvents\Schemes\Apps\.Default\LowBatteryAlarm]
+DefaultValue=TPBTLWV.wav
+[AppEvents\Schemes\Apps\.Default\SystemExit]
+DefaultValue=%SystemRoot%\media\Windows Shutdown.wav
+[CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-123
+[CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-25
+[Theme]
+DisplayName=gauthier7
